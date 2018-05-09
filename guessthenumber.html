@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+	<title></title>
+	<style type="text/css">
+body{
+           background-color: orange;
+           /*background-image: url();*/
+}
+button{
+      display: block;
+      margin: 0 auto;
+      padding: 2em;
+      font-size: 2em;
+
+}
+</style>
+</head>
+<body>
+<button onclick=start()>Start!</button>
+	<script type="text/javascript">
+function start(){
+
+
+		
+var score = {computer:0,player:0}
+while(userNumber != "stop"){
+var randomNumber = Math.floor(Math.random() * 3)
+var userNumber = prompt("Guess a number between 1 and 5. Type 'stop' to stop." )
+if (randomNumber == userNumber) {
+	console.log ('Not right')
+	score.computer = score.computer + 1} else {
+		console.log('Right!')
+
+		score.player = score.player + 1}}
+		document.body.innerHTML = ""
+document.write(`<h1>The player's score is
+	${score.player}, the computer's score is
+	${score.computer}</h1><button onclick=start()>Again?</button>`) 
+
+}
+	</script>
+
+</body>
+</html>
